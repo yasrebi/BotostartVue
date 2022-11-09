@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-3" dir="rtl">
+  <div class="container my-4" dir="rtl">
     <div class="row text-center g-3">
       <div v-for="product in products" :key="product.id" class="col-md-3">
         <div class="card p-3">
