@@ -106,6 +106,7 @@ export default {
 }
 
 
+
 @media (max-width: 900px) {
   .container-comments {
     max-width: 860px;

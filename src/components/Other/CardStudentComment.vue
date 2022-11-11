@@ -101,4 +101,17 @@ export default {
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .row-comments {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+  .row-comments {
+    max-width: 545px;
+  }
+
+}
 </style>

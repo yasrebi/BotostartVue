@@ -15,14 +15,16 @@ import StudentComments from "@/components/Other/StudentComments.vue";
 
 import NotFound from "@/components/Theme Builder/NotFound.vue";
 
+import LoginPage from "@/components/Theme Builder/RegistrationLogin/LoginPage.vue";
+import RegisterPage from "@/components/Theme Builder/RegistrationLogin/RegisterPage.vue";
 import SigninLoginPage from "@/components/Page Builder/SigninLoginPage.vue";
-import DashboardPage from "@/components/Page Builder/DashboardPage.vue";
 
+import DashboardPage from "@/components/Page Builder/DashboardPage.vue";
 import KarbarPage from "@/components/Other/KarbarPage.vue";
 import AboutUs from "@/components/Page Builder/AboutUs.vue";
+
 import CartPage from "@/components/Theme Builder/cart/CartPage.vue";
 import TaskPage from "@/components/Page Builder/TaskPage.vue";
-
 import CoursesIndex from "@/components/Page Builder/Courses/CoursesIndex.vue";
 import TypeScript from "@/components/Page Builder/Courses/AllCourses/TypeScript.vue";
 import NodeJS from "@/components/Page Builder/Courses/AllCourses/NodeJS.vue";
@@ -63,9 +65,15 @@ const routes = [
             {path: 'mobile-first', name: 'mobileFirst', component: MobileFirst},
         ]
     },
+
+
+    {path: '/login', name: 'loginBotostart', component: LoginPage},
+    {path: '/register', name: 'registerBotostart', component: RegisterPage},
+    {path: '/loginCustom', name: 'signinLogin', component: SigninLoginPage},
+
+
     {path: '/aboutus', name: 'aboutUs', component: AboutUs},
     {path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound},
-    {path: '/login', name: 'signinLogin', component: SigninLoginPage},
     {path: '/dashboard', name: 'dashboard', component: DashboardPage},
     {path: '/karbar', name: 'karbar', component: KarbarPage},
     {path: '/cart', name: 'cart', component: CartPage},
