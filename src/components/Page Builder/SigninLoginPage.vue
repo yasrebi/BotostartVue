@@ -1,5 +1,5 @@
 <template>
-  <section class="validation-section text-center mb-5 bg-dark">
+  <section class="validation-section text-center mb-5">
     <div class="container rounded-3">
       <div class="row mx-auto">
         <div class="col-md-6 d-none d-md-block">
