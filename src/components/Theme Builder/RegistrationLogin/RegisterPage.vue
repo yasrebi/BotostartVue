@@ -226,6 +226,8 @@ img {
   animation-name: mui-auto-fill-cancel;
   animation-duration: 10ms;
   padding: 14px 0;
+  text-align: right;
+  font-family: 'Yekan';
 }
 
 .form-input input:focus {

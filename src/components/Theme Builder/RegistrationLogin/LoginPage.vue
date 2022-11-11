@@ -89,8 +89,6 @@ export default {
     function sendConfirmCode() {
       if (confirmCodeValue.value === '') {
 
-        console.log("Error");
-
         Swal.fire({
           title: 'شماره موبایل وارد شده صحیح نمیباشد',
           icon: 'error',
@@ -215,6 +213,7 @@ img {
   animation-name: mui-auto-fill-cancel;
   animation-duration: 10ms;
   padding: 14px 0;
+  text-align: right;
 }
 
 .form-input input:focus {

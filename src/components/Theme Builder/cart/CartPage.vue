@@ -155,9 +155,9 @@
             </div>
             <hr>
             <div class="discount-box d-flex flex-row-reverse justify-content-between mt-4">
-              <div><input class="discount-input" type="text" placeholder="کد تخفیف"></div>
+              <div><input v-model="discountValue" class="discount-input" type="text" placeholder="کد تخفیف"></div>
               <div>
-                <button class="btn-discount">اعمال</button>
+                <button @click.prevent="sendDiscountCode" class="btn-discount">اعمال</button>
               </div>
             </div>
             <div class="mt-5 d-flex flex-row-reverse justify-content-between">
@@ -195,6 +195,7 @@
 import {computed, ref} from "vue";
 import {useTitle} from '@vueuse/core';
 import {useStore} from "vuex";
+import Swal from "sweetalert2";
 
 export default {
   name: "CartPage",
@@ -202,6 +203,7 @@ export default {
     const title = useTitle();
     title.value = 'سبد خرید | بوتواستارت';
     let emptyCart = ref(require("@/assets/img/cart/empty-basket.webp"));
+    const discountValue = ref('');
     const store = useStore();
     const cartItems = computed(() => store.getters['cart/allItems']);
     const cartTotalAmount = computed(() => store.getters['cart/totalAmount']);
@@ -216,7 +218,23 @@ export default {
     }
 
 
-    return {emptyCart, cartItems, cartTotalAmount, removeFromCart, clearAllCart}
+    function sendDiscountCode() {
+      if (discountValue.value === '') {
+        Swal.fire({
+          title: 'کد تخفیف وارد شده وجود ندارد',
+          icon: 'error',
+          showConfirmButton: false,
+          timerProgressBar: true,
+          timer: 3000,
+          toast: true,
+          position: 'top',
+        });
+      } else {
+        console.log("OK");
+      }
+    }
+
+    return {emptyCart, cartItems, cartTotalAmount, removeFromCart, clearAllCart, discountValue, sendDiscountCode}
   }
 }
 </script>
