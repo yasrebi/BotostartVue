@@ -85,7 +85,12 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: routes
+    routes: routes,
+    scrollBehavior () {
+        // return desired position
+        // always scroll to top
+        return { top: 0 }
+    }
 })
 
 export default router;

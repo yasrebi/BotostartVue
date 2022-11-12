@@ -93,7 +93,7 @@ export default {
   setup() {
     const title = useTitle();
     title.value = "ثبت نام به بوتواستارت"
-    const logo = ref(require('@/assets/img/login/logo.png'));
+    const logo = ref(require('@/assets/img/login/login.png'));
 
     const confirmCodeValue = ref('');
 
